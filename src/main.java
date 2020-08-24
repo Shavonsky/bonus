@@ -1,14 +1,17 @@
-public class main {
-    public static void main(String[] args) {
-        int balance = 1000;
+public class Main {
+    public static void Main(String[] args) {
+        int balance = 100;
         int transfer = 500;
-        int limit = 1099;
-
-        int final_balance = (balance + transfer);
-
-        if (final_balance > limit) {
-            int bonus = final_balance / 100;
-            System.out.println(bonus);
+        int limit = 1000;
+        int bonus;
+        if (transfer >= limit) {
+            bonus = 1;
+        } else {
+            bonus = 0;
         }
+
+        int bonus_balance = transfer * bonus / 100;
+        System.out.println(bonus_balance);
+       
     }
 }
